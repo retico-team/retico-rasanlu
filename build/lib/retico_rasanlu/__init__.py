@@ -1,1 +1,0 @@
-from retico_rasanlu.rasanlu import *
