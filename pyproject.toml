@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools==70", "setuptools-scm[simple]>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "retico-rasanlu"
+dynamic = ["version"]
+authors = [
+    { name ="Ryan Pacheco"},
+    { name = "Casey Kennington", email = "caseykennington@boisestate.edu" },
+    { name = "Enoch Levandovsky", email = "enochlev@gmail.com" }
+]
+
+dependencies = [
+    "retico-core>=0.2.10",
+    "rasa @ git+https://bitbucket.org/bsu-slim/incremental-rasa-nlu.git",
+    "protobuf==3.19.6",
+    "websockets<11",
+    "aio-pika>=7,<8",
+    "psycopg2-binary==2.9.5",
+    "spacy<3.5",
+    "setuptools<66",
+]
+[project.optional-dependencies]
+asr = [
+    "retico-googleasr",
+    "google-cloud-speech~=2.15",
+]
+requires-python = ">=3.7, <3.9"
+description = "Retico module for Natural Language Understanding using Rasa NLU"
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = [
+    "retico",
+    "framework",
+    "incremental",
+    "nlu",
+    "rasa",
+    "dialogue",
+    "language understanding"
+]
+classifiers = [
+        "Development Status :: 2 - Pre-Alpha",
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: Apache Software License",
+    ]

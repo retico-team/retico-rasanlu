@@ -1,0 +1,10 @@
+retico-core>=0.2.10
+retico-googleasr
+rasa@ git+https://bitbucket.org/bsu-slim/incremental-rasa-nlu.git
+protobuf==3.19.6
+websockets<11
+aio-pika<8,>=7
+psycopg2-binary==2.9.5
+google-cloud-speech~=2.15
+spacy<3.5
+setuptools<66
